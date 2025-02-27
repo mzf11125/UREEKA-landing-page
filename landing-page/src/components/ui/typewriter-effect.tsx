@@ -93,7 +93,7 @@ export const TypewriterEffect = ({
           "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-blue-500",
           cursorClassName
         )}
-      ></motion.span>
+      />
     </div>
   );
 };
@@ -181,7 +181,7 @@ export const TypewriterEffectSmooth = ({
           "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
           cursorClassName
         )}
-      ></motion.span>
+      />
     </div>
   );
 };

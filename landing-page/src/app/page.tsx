@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { FloatingNavDemo } from "../components/page-components/navbar";
 import Achievement from "../components/page-components/achievement";
 import Aboutus from "@/components/page-components/aboutus";

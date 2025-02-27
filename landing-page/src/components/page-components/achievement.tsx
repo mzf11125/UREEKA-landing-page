@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
@@ -190,7 +189,13 @@ const Achievement = () => {
   );
 };
 
-const TimelineItem = ({ year, title, description }) => {
+interface TimelineItemProps {
+  year: string;
+  title: string;
+  description: string;
+}
+
+const TimelineItem = ({ year, title, description }: TimelineItemProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}

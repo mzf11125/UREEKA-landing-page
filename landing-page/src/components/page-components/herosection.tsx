@@ -98,7 +98,7 @@ const HeroSection = () => {
           <Button
             variant="outline"
             size="lg"
-            className="border-orange-400/30 text-orange-50 hover:bg-orange-500/10"
+            className="border-orange-400/30 text-orange-500 hover:bg-orange-500/10"
             onClick={() =>
               document
                 .getElementById("about")

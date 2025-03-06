@@ -38,26 +38,26 @@ const Achievement = () => {
     {
       id: 1,
       name: "Cathlyn Shanice",
-      image: "/api/placeholder/150/150",
-      title: "UREEKA Chairman 2025",
+      image: "",
+      designation: "UREEKA Chairman 2025",
     },
     {
       id: 2,
       name: "Ivan Wijaya",
       image: "/api/placeholder/150/150",
-      title: "Vice Chairman",
+      designation: "Vice Chairman",
     },
     {
       id: 3,
       name: "Richard Smith",
       image: "/api/placeholder/150/150",
-      title: "Vice Chairman",
+      designation: "Vice Chairman",
     },
     {
       id: 4,
       name: "Muhammad Zidan Fatonie",
       image: "/api/placeholder/150/150",
-      title: "Manager",
+      designation: "Manager",
     },
   ];
 
@@ -152,7 +152,7 @@ const Achievement = () => {
         <div className="flex flex-wrap justify-center gap-8">
           <AnimatedTooltip
             items={teams}
-            className="w-24 h-24 md:w-32 md:h-32"
+            // className="w-24 h-24 md:w-32 md:h-32"
           />
         </div>
       </div>

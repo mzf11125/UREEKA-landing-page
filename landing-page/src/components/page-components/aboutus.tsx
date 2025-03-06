@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CardStack } from "@/components/ui/card-stack";
+// import { CardStack } from "@/components/ui/card-stack";
 import { cn } from "@/lib/utils";
 import { LampContainer } from "@/components/ui/lamp";
 
@@ -15,26 +15,26 @@ const Aboutus = () => {
     { value: "15", label: "Universities" },
   ];
 
-  const testimonials = [
-    {
-      quote:
-        "Joining Ureeka changed my entire college experience. I got to work on real problems and even landed my dream internship!",
-      name: "Alex Johnson",
-      title: "Computer Science, Stanford",
-    },
-    {
-      quote:
-        "The mentorship and community at Ureeka is unmatched. I went from knowing basic HTML to building full-stack applications.",
-      name: "Sophia Chen",
-      title: "Data Science, MIT",
-    },
-    {
-      quote:
-        "My team formed at an Ureeka hackathon and we're now working on turning our project into a startup. Life-changing experience!",
-      name: "Marcus Williams",
-      title: "Business & CS, Berkeley",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     quote:
+  //       "Joining Ureeka changed my entire college experience. I got to work on real problems and even landed my dream internship!",
+  //     name: "Alex Johnson",
+  //     title: "Computer Science, Stanford",
+  //   },
+  //   {
+  //     quote:
+  //       "The mentorship and community at Ureeka is unmatched. I went from knowing basic HTML to building full-stack applications.",
+  //     name: "Sophia Chen",
+  //     title: "Data Science, MIT",
+  //   },
+  //   {
+  //     quote:
+  //       "My team formed at an Ureeka hackathon and we're now working on turning our project into a startup. Life-changing experience!",
+  //     name: "Marcus Williams",
+  //     title: "Business & CS, Berkeley",
+  //   },
+  // ];
 
   return (
     <div className="py-8">
@@ -118,7 +118,7 @@ const Aboutus = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <motion.div
-              key={index}
+              key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -162,8 +162,8 @@ const Aboutus = () => {
           Ready to Join Ureeka?
         </h3>
         <p className="text-amber-100/80 max-w-2xl mx-auto mb-8">
-          Be part of a community that's shaping the future of technology through
-          creativity, collaboration, and code.
+          Be part of a community that&apos;s shaping the future of technology
+          through creativity, collaboration, and code.
         </p>
         <Button
           size="lg"

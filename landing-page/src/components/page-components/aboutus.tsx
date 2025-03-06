@@ -135,7 +135,7 @@ const Aboutus = () => {
 
       {/* Testimonials */}
       <div className="mb-20">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -144,10 +144,10 @@ const Aboutus = () => {
           >
             What Our Members Say
           </motion.h3>
-        </div>
+        </div> */}
 
         <div className="max-w-4xl mx-auto">
-          <CardStack items={testimonials} />
+          {/* <CardStack items={testimonials} /> */}
         </div>
       </div>
 

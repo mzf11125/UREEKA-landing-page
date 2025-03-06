@@ -37,27 +37,27 @@ const Achievement = () => {
   const teams = [
     {
       id: 1,
-      name: "Team Quantum",
+      name: "Cathlyn Shanice",
       image: "/api/placeholder/150/150",
-      title: "AI Track Winners",
+      title: "UREEKA Chairman 2025",
     },
     {
       id: 2,
-      name: "ByteBusters",
+      name: "Ivan Wijaya",
       image: "/api/placeholder/150/150",
-      title: "Web3 Champions",
+      title: "Vice Chairman",
     },
     {
       id: 3,
-      name: "CyberSolvers",
+      name: "Richard Smith",
       image: "/api/placeholder/150/150",
-      title: "Security Experts",
+      title: "Vice Chairman",
     },
     {
       id: 4,
-      name: "DataWizards",
+      name: "Muhammad Zidan Fatonie",
       image: "/api/placeholder/150/150",
-      title: "Machine Learning",
+      title: "Manager",
     },
   ];
 
@@ -85,12 +85,12 @@ const Achievement = () => {
 
       {/* Achievement Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-        {achievements.map((achievement, index) => (
+        {achievements.map((achievement) => (
           <motion.div
-            key={index}
+            key={achievement.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <CardContainer className="inter-var w-full">
               <CardBody
@@ -130,6 +130,7 @@ const Achievement = () => {
       </div>
 
       {/* Team Showcase */}
+      {/* Team Showcase */}
       <div className="text-center mb-12">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
@@ -137,7 +138,7 @@ const Achievement = () => {
           transition={{ duration: 0.8 }}
           className="text-3xl font-bold text-amber-50 mb-4"
         >
-          Our Winning Teams
+          Our Members
         </motion.h3>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -148,8 +149,11 @@ const Achievement = () => {
           Meet the brilliant minds behind our success
         </motion.p>
 
-        <div className="flex flex-wrap justify-center gap-4">
-          <AnimatedTooltip items={teams} />
+        <div className="flex flex-wrap justify-center gap-8">
+          <AnimatedTooltip
+            items={teams}
+            className="w-24 h-24 md:w-32 md:h-32"
+          />
         </div>
       </div>
 

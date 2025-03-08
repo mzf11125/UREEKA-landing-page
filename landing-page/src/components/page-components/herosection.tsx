@@ -39,7 +39,7 @@ const HeroSection = () => {
   ];
 
   const description =
-    "Join the most vibrant hackathon community and turn your wildest ideas into reality. Connect with like-minded innovators, learn from industry experts, and build projects that matter.";
+    "Join the most vibrant hackathon community in BINUS and turn your wildest ideas into reality. Connect with like-minded innovators, learn from industry experts, and build projects that matter.";
 
   if (!mounted) return null;
 

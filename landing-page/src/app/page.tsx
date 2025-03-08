@@ -15,7 +15,7 @@ export default function Home() {
       <BackgroundGradientAnimation
         containerClassName="fixed inset-0 -z-10 transition-all duration-1000"
         className="h-full w-full"
-        colors={["#FFA500", "#FFCC00", "#FF8C00", "#FFC107", "#FFD700"]}
+        // colors={["#FFA500", "#FFCC00", "#FF8C00", "#FFC107", "#FFD700"]}
       />
 
       {/* Navigation */}

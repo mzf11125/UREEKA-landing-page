@@ -1,74 +1,51 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-let interval: any;
-
-type Card = {
-  id: number;
+interface CardStackItem {
+  quote: string;
   name: string;
-  designation: string;
-  content: React.ReactNode;
-};
+  title: string;
+}
 
-export const CardStack = ({
-  items,
-  offset,
-  scaleFactor,
-}: {
-  items: Card[];
-  offset?: number;
-  scaleFactor?: number;
-}) => {
-  const CARD_OFFSET = offset || 10;
-  const SCALE_FACTOR = scaleFactor || 0.06;
-  const [cards, setCards] = useState<Card[]>(items);
+interface CardStackProps {
+  items: CardStackItem[];
+  className?: string;
+}
 
-  useEffect(() => {
-    startFlipping();
-
-    return () => clearInterval(interval);
-  }, []);
-  const startFlipping = () => {
-    interval = setInterval(() => {
-      setCards((prevCards: Card[]) => {
-        const newArray = [...prevCards]; // create a copy of the array
-        newArray.unshift(newArray.pop()!); // move the last element to the front
-        return newArray;
-      });
-    }, 5000);
-  };
+export const CardStack = ({ items, className }: CardStackProps) => {
+  const [selected, setSelected] = useState(0);
 
   return (
-    <div className="relative  h-60 w-60 md:h-60 md:w-96">
-      {cards.map((card, index) => {
-        return (
-          <motion.div
-            key={card.id}
-            className="absolute dark:bg-black bg-white h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
-            style={{
-              transformOrigin: "top center",
-            }}
-            animate={{
-              top: index * -CARD_OFFSET,
-              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-              zIndex: cards.length - index, //  decrease z-index for the cards that are behind
-            }}
-          >
-            <div className="font-normal text-neutral-700 dark:text-neutral-200">
-              {card.content}
-            </div>
+    <div className={cn("relative w-full h-72 md:h-64", className)}>
+      {items.map((item, index) => (
+        <motion.div
+          key={item.name}
+          className={cn(
+            "absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-400/10 p-8 rounded-2xl border border-white/10 backdrop-blur-sm shadow-xl transition-all duration-500",
+            selected === index
+              ? "cursor-default opacity-100 z-20"
+              : "cursor-pointer opacity-70 hover:opacity-80 z-10"
+          )}
+          animate={{
+            rotate: selected === index ? 0 : index % 2 === 0 ? -2 : 2,
+            x: selected === index ? 0 : index % 2 === 0 ? -8 : 8,
+            scale: selected === index ? 1 : 0.95,
+          }}
+          onClick={() => setSelected(index)}
+        >
+          <div className="relative h-full w-full flex flex-col justify-center">
+            <p className="text-amber-100/90 text-lg mb-6 italic">
+              "{item.quote}"
+            </p>
             <div>
-              <p className="text-neutral-500 font-medium dark:text-white">
-                {card.name}
-              </p>
-              <p className="text-neutral-400 font-normal dark:text-neutral-200">
-                {card.designation}
-              </p>
+              <p className="text-amber-50 font-semibold">{item.name}</p>
+              <p className="text-amber-200/80 text-sm">{item.title}</p>
             </div>
-          </motion.div>
-        );
-      })}
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 };

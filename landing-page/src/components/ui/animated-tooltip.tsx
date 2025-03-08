@@ -17,7 +17,7 @@ export const AnimatedTooltip = ({
     id: number;
     name: string;
     designation: string;
-    image: string;
+    image: string | null;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -67,7 +67,7 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: "nowrap",
                 }}
-                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
               >
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
@@ -80,11 +80,11 @@ export const AnimatedTooltip = ({
           </AnimatePresence>
           <Image
             onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
-            src={item.image}
+            height={200} // Increased height
+            width={200} // Increased width
+            src={item.image || "/default-avatar.png"}
             alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
+            className="object-cover !m-0 !p-0 object-top rounded-full h-32 w-32 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500" // Adjusted class names for size
           />
         </div>
       ))}

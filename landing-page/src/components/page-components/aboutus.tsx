@@ -1,9 +1,9 @@
 "use client";
 
-// import { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-// import { CardStack } from "@/components/ui/card-stack";
+import { CardStack } from "@/components/ui/card-stack";
 import { cn } from "@/lib/utils";
 import { LampContainer } from "@/components/ui/lamp";
 
@@ -12,34 +12,40 @@ const Aboutus = () => {
     { value: "25+", label: "Hackathons" },
     { value: "500+", label: "Members" },
     { value: "40+", label: "Projects" },
-    { value: "15", label: "Universities" },
+    { value: "3+", label: "Universities" },
   ];
 
-  // const testimonials = [
-  //   {
-  //     quote:
-  //       "Joining Ureeka changed my entire college experience. I got to work on real problems and even landed my dream internship!",
-  //     name: "Alex Johnson",
-  //     title: "Computer Science, Stanford",
-  //   },
-  //   {
-  //     quote:
-  //       "The mentorship and community at Ureeka is unmatched. I went from knowing basic HTML to building full-stack applications.",
-  //     name: "Sophia Chen",
-  //     title: "Data Science, MIT",
-  //   },
-  //   {
-  //     quote:
-  //       "My team formed at an Ureeka hackathon and we're now working on turning our project into a startup. Life-changing experience!",
-  //     name: "Marcus Williams",
-  //     title: "Business & CS, Berkeley",
-  //   },
-  // ];
+  const testimonials = [
+    {
+      id: 1,
+      designation: "Member",
+      quote:
+        "Joining Ureeka changed my entire college experience. I got to work on real problems and even landed my dream internship!",
+      name: "Alex Johnson",
+      title: "Computer Science, Stanford",
+    },
+    {
+      id: 2,
+      designation: "Member",
+      quote:
+        "The mentorship and community at Ureeka is unmatched. I went from knowing basic HTML to building full-stack applications.",
+      name: "Sophia Chen",
+      title: "Data Science, MIT",
+    },
+    {
+      id: 3,
+      designation: "Member",
+      quote:
+        "My team formed at an Ureeka hackathon and we're now working on turning our project into a startup. Life-changing experience!",
+      name: "Marcus Williams",
+      title: "Business & CS, Berkeley",
+    },
+  ];
 
   return (
     <div className="py-8">
       {/* Main About Section */}
-      <LampContainer>
+      <LampContainer className="">
         <motion.h2
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +141,7 @@ const Aboutus = () => {
 
       {/* Testimonials */}
       <div className="mb-20">
-        {/* <div className="text-center mb-12">
+        <div className="text-center mb-12">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -144,10 +150,10 @@ const Aboutus = () => {
           >
             What Our Members Say
           </motion.h3>
-        </div> */}
+        </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* <CardStack items={testimonials} /> */}
+          <CardStack items={testimonials} className="" />
         </div>
       </div>
 

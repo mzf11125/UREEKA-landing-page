@@ -38,25 +38,25 @@ const Achievement = () => {
     {
       id: 1,
       name: "Cathlyn Shanice",
-      image: "",
+      image: "/ketua23.png",
       designation: "UREEKA Chairman 2025",
     },
     {
       id: 2,
       name: "Ivan Wijaya",
-      image: "/api/placeholder/150/150",
+      image: "/ivancrop.jpg",
       designation: "Vice Chairman",
     },
     {
       id: 3,
-      name: "Richard Smith",
+      name: "Roderich Cavine Chow",
       image: "/api/placeholder/150/150",
       designation: "Vice Chairman",
     },
     {
       id: 4,
       name: "Muhammad Zidan Fatonie",
-      image: "/api/placeholder/150/150",
+      image: "/zidan.jfif",
       designation: "Manager",
     },
   ];
@@ -130,7 +130,6 @@ const Achievement = () => {
       </div>
 
       {/* Team Showcase */}
-      {/* Team Showcase */}
       <div className="text-center mb-12">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
@@ -150,10 +149,7 @@ const Achievement = () => {
         </motion.p>
 
         <div className="flex flex-wrap justify-center gap-8">
-          <AnimatedTooltip
-            items={teams}
-            // className="w-24 h-24 md:w-32 md:h-32"
-          />
+          <AnimatedTooltip items={teams} />
         </div>
       </div>
 

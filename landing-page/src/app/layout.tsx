@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "UREEKA",
   description:
-    "UREEKA is a club for BINUS Computer Science students interested in hackathons.",
+    "UREEKA is a club for BINUS Computer Science students who are interested in hackathons.",
 };
 
 export default function RootLayout({

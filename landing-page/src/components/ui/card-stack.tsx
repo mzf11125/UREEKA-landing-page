@@ -37,7 +37,7 @@ export const CardStack = ({ items, className }: CardStackProps) => {
         >
           <div className="relative h-full w-full flex flex-col justify-center">
             <p className="text-amber-100/90 text-lg mb-6 italic">
-              "{item.quote}"
+              &rdquo;{item.quote}&rdquo;
             </p>
             <div>
               <p className="text-amber-50 font-semibold">{item.name}</p>

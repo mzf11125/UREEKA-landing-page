@@ -3,7 +3,20 @@ import React, { useState } from "react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export const FloatingNav = ({ navItems, className }) => {
+interface NavItem {
+  name: string;
+  link: string;
+}
+
+interface FloatingNavProps {
+  navItems: NavItem[];
+  className?: string;
+}
+
+export const FloatingNav: React.FC<FloatingNavProps> = ({
+  navItems,
+  className,
+}) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
 

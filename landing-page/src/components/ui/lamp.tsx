@@ -1,19 +1,30 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export const LampContainer = ({ children, className, ...props }) => {
-  const containerRef = useRef(null);
+interface LampContainerProps {
+  children: React.ReactNode;
+  className?: string;
+  [key: string]: unknown;
+}
+
+export const LampContainer: React.FC<LampContainerProps> = ({
+  children,
+  className,
+  ...props
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
       setMousePosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
       });
     };
 

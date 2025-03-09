@@ -56,7 +56,7 @@ const Achievement = () => {
     {
       id: 4,
       name: "Muhammad Zidan Fatonie",
-      image: "/zidan.jfif",
+      image: "/zidanfix.jpg",
       designation: "Manager",
     },
   ];

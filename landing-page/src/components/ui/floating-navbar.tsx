@@ -56,7 +56,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
         )}
       >
         <div className="mx-auto flex items-center justify-center space-x-4 rounded-full border border-white/10 bg-black/60 px-8 py-4 backdrop-blur-md">
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.link}

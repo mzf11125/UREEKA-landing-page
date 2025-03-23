@@ -3,7 +3,6 @@
 import { FloatingNavDemo } from "@/components/page-components/navbar";
 import Achievement from "@/components/page-components/achievement";
 import Aboutus from "@/components/page-components/aboutus";
-import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/page-components/herosection";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { SparklesCore } from "@/components/ui/sparkles";

@@ -43,20 +43,32 @@ const Achievement = () => {
     },
     {
       id: 2,
-      name: "Ivan Wijaya",
+      name: "Ignatius Ivan Wijaya",
       image: "/ivancrop.jpg",
       designation: "Vice Chairman",
     },
     {
       id: 3,
       name: "Roderich Cavine Chow",
-      image: "/api/placeholder/150/150",
+      image: "/rich.jpg",
       designation: "Vice Chairman",
     },
     {
       id: 4,
       name: "Muhammad Zidan Fatonie",
       image: "/zidanfix.jpg",
+      designation: "Manager",
+    },
+    {
+      id: 5,
+      name: "Stanley Nathanael Wijaya",
+      image: "/StanleyNathanaelWijayazoom1.jpg",
+      designation: "Manager",
+    },
+    {
+      id: 6,
+      name: "Dionisius Sylvester Wime",
+      image: "/DionisiusSylvesterWime.jpg",
       designation: "Manager",
     },
   ];

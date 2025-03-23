@@ -84,7 +84,7 @@ export const AnimatedTooltip = ({
             width={200} // Increased width
             src={item.image || "/default-avatar.png"}
             alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-32 w-32 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500" // Adjusted class names for size
+            className="object-cover !m-0 !p-0 object-top rounded-full h-36 w-36 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500" // Adjusted class names for size
           />
         </div>
       ))}

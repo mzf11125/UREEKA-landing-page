@@ -59,7 +59,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <h2 className="text-xl md:text-2xl font-medium text-amber-100 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-amber-100 mb-4">
           Welcome to Ureeka Hackathon Club
         </h2>
 

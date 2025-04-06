@@ -52,9 +52,13 @@ const HeroSection = () => {
         className="relative z-10"
       >
         <div className="mb-4 flex items-center justify-center">
-          <div className="h-20 w-20 rounded-full bg-gradient-to-tr from-orange-500 to-yellow-400 p-1">
+          <div className="h-20 w-20 rounded-full bg-gradient-to-tr from-orange-500 to-purple-500 p-1">
             <div className="h-full w-full rounded-full bg-black/10 backdrop-blur-md flex items-center justify-center">
-              <span className="text-2xl font-bold text-white">U</span>
+              <img
+                src="/logo.jpg"
+                alt="Logo"
+                className="rounded-full h-18 w-18"
+              />
             </div>
           </div>
         </div>

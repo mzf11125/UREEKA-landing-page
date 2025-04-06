@@ -24,12 +24,6 @@ const Form = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
 
-  interface FormField {
-    name: string;
-    email: string;
-    region: string;
-  }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setFormData({
       ...formData,
@@ -38,8 +32,8 @@ const Form = () => {
   };
 
   interface SupabaseResponse {
-    data: any;
-    error: any;
+    data: WaitlistEntry[] | null;
+    error: { message: string } | null;
   }
 
   interface WaitlistEntry {

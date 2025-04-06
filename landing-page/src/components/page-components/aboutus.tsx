@@ -19,7 +19,7 @@ const Aboutus = () => {
       id: 1,
       designation: "Member",
       quote:
-        "Joining Ureeka changed my entire college experience. I got to work on real problems and even landed my dream internship!",
+        "Joining UREEKA changed my entire college experience. I got to work on real problems and even landed my dream internship!",
       name: "Alex Johnson",
       title: "Computer Science, Stanford",
     },
@@ -27,7 +27,7 @@ const Aboutus = () => {
       id: 2,
       designation: "Member",
       quote:
-        "The mentorship and community at Ureeka is unmatched. I went from knowing basic HTML to building full-stack applications.",
+        "The mentorship and community at UREEKA is unmatched. I went from knowing basic HTML to building full-stack applications.",
       name: "Sophia Chen",
       title: "Data Science, MIT",
     },
@@ -35,7 +35,7 @@ const Aboutus = () => {
       id: 3,
       designation: "Member",
       quote:
-        "My team formed at an Ureeka hackathon and we're now working on turning our project into a startup. Life-changing experience!",
+        "My team formed at an UREEKA hackathon and we're now working on turning our project into a startup. Life-changing experience!",
       name: "Marcus Williams",
       title: "Business & CS, Berkeley",
     },
@@ -51,7 +51,7 @@ const Aboutus = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-amber-200 mb-4"
         >
-          About Ureeka
+          About UREEKA
         </motion.h2>
         <motion.p
           initial={{ opacity: 0.5, y: 100 }}
@@ -164,7 +164,7 @@ const Aboutus = () => {
         className="text-center mt-20"
       >
         <h3 className="text-2xl font-bold text-amber-50 mb-4">
-          Ready to Join Ureeka?
+          Ready to Join UREEKA?
         </h3>
         <p className="text-amber-100/80 max-w-2xl mx-auto mb-8">
           Be part of a community that&apos;s shaping the future of technology

@@ -191,7 +191,7 @@ const Achievement = () => {
               <TimelineItem
                 year="2021"
                 title="Club Foundation"
-                description="Ureeka Hackathon Club was founded by a group of passionate students looking to foster innovation and technical excellence."
+                description="UREEKA Hackathon Club was founded by a group of passionate students looking to foster innovation and technical excellence."
               />
             </div>
           </div>

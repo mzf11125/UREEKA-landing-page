@@ -33,7 +33,7 @@ const HeroSection = () => {
       className: "text-orange-600 dark:text-orange-300",
     },
     {
-      text: "Ureeka!",
+      text: "UREEKA!",
       className: "text-amber-600 dark:text-amber-300",
     },
   ];
@@ -60,7 +60,7 @@ const HeroSection = () => {
         </div>
 
         <h2 className="text-xl md:text-2xl font-bold text-amber-100 mb-4">
-          Welcome to Ureeka Hackathon Club
+          Welcome to UREEKA Hackathon Club
         </h2>
 
         <div className="mb-8">

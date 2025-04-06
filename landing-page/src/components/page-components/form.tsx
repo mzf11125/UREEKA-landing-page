@@ -62,7 +62,7 @@ const Form = () => {
 
     try {
       // Insert data into Supabase table (assuming a table named 'waitlist')
-      const { data, error }: SupabaseResponse = await supabase
+      const { error }: SupabaseResponse = await supabase
         .from("waitlist")
         .insert([
           {
